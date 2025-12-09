@@ -1,0 +1,64 @@
+//
+// Copyright (C) 2019-2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit.xiaomi_8996",
+    recovery_available: true,
+    srcs: ["init_msm8996.cpp"],
+    include_dirs: [
+        "system/core/init"
+    ],
+    shared_libs: [
+        "libbase",
+    ]
+}
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    soc_specific: true,
+    ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.power.rc",
+    src: "init.qcom.power.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.recovery.rc",
+    src: "init.qcom.recovery.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.qcom.rc",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    soc_specific: true,
+}
