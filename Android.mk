@@ -25,9 +25,4 @@
 # components.
 
 LOCAL_PATH := $(call my-dir)
-
-ifneq ($(TARGET_DEVICE),MaxLumi)
-
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
-endif

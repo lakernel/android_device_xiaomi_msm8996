@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/msm8996-common/msm8996-common-vendor.mk)
+$(call inherit-product, vendor/onyx/535650C1/535650C1-vendor.mk)
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
